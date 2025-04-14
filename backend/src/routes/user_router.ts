@@ -67,7 +67,6 @@ user_router.post('/signin',async (c)=>{
         return c.json({'message': "User not found"})
       }
       const jwt = await sign({ id: user.id }, c.env.JWT_SECRET);
-      c.header('Authorization', `${jwt}`)
       return c.json({ jwt });
     }
     catch(e){

@@ -111,6 +111,16 @@ blog_router.get('/get/:id',async (c)=>{
         const blog = await prisma.post.findFirst({
             where:{
                 id: id
+            },
+            select:{
+                title:true,
+                content: true,
+                id: true,
+                author:{
+                    select:{
+                        name: true
+                    }
+                }
             }
         })
         return c.json({
@@ -133,16 +143,22 @@ blog_router.get('/bulk',async (c)=>{
     try{
         const blog = await prisma.post.findMany({
             select:{
-                title: true
+                title: true,
+                content: true,
+                id: true,
+                author:{
+                    select:{
+                        name: true
+                    }
+                }
             }
         })
-        return c.json({ titles: blog.map(b => b.title) })
+        return c.json({blog})
     }catch(e){
         c.status(411)
         return c.json({
             "message": " Cannot print the titles"
         })
     }
-    return c.text("Get all the Blogs")
   }
 )
