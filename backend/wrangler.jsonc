@@ -4,8 +4,8 @@
   "main": "src/index.ts",
   "compatibility_date": "2025-04-07",
   "vars": {
-      "DATABASE_URL":"",
-      "JWT_SECRET":""
+      "DATABASE_URL":"prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiODA1ZTlhNTktMTAxNS00YTMzLWI4ODMtOWU3NWQ3YTI2ZDYxIiwidGVuYW50X2lkIjoiYmUwMTA2Njc2ZGQ3ZGQ4NWU2MmY3NWI1ZmVlYTVhMWJhNzlkZjdkZDY3YTE3MDI0Nzc0ODFjZDY5YWZkZTYzMSIsImludGVybmFsX3NlY3JldCI6IjYwOWZiMzZjLTM0OTEtNDBhZi1hYTMyLTYyY2Q5NDQyMjUxMyJ9.FlvO5DkE7PpourhOPBG6BBcNY9iDUE06HJLAOsxLbzw",
+      "JWT_SECRET":"MohitServer"
     }
   // "compatibility_flags": [
   //   "nodejs_compat"
